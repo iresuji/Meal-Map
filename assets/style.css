@@ -33,6 +33,7 @@ body {
     justify-content: left;
     align-items: center;
     overflow: auto;
+
 }
 
 .jumbotron-bg {
@@ -40,4 +41,18 @@ body {
     color: white;
     height: 1000px;
     background-size: cover;
+}
+
+.child {
+    min-width: 600px;
+    height: 400px;
+    margin: 1px 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    overflow: hidden;
+}
+
+.child-img {
+    width: 100%;
+    height: 100%;
 }
