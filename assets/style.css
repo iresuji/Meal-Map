@@ -1,72 +1,186 @@
 .main-scroll {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .cover {
-    position: relative;
-    width: 90%;
-    height: 50%;
+  position: relative;
+  width: 90%;
+  height: 50%;
 }
 
 .scroll-images {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    overflow: auto;
-    position: relative;
-    scroll-behavior: smooth;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  overflow: auto;
+  position: relative;
+  scroll-behavior: smooth;
 }
 
 .jumbotron-bg {
-    background-image: url(./img/Burger\ jumbotrom\ pic.avif);
-    color: white;
-    height: 1000px;
-    background-size: cover;
+  background-image: url(./img/Burger\ jumbotrom\ pic.avif);
+  color: white;
+  height: 1000px;
+  background-size: cover;
 }
 
 .child {
-    min-width: 600px;
-    height: 400px;
-    margin: 1px 10px;
-    cursor: pointer;
-    border: 1px solid white;
-    overflow: hidden;
+  min-width: 600px;
+  height: 400px;
+  margin: 1px 10px;
+  cursor: pointer;
+  border: 1px solid white;
+  overflow: hidden;
 }
 
 .scroll-images::-webkit-scrollbar {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
 
 
 .child-img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
-.cover::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 0;
-    z-index: 99;
-    height: 100%;
-    width: 150px;
-    background-image: linear-gradient(90deg, white, transparent);
+#contact {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
 }
 
-.cover::after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 0;
-    z-index: 99;
-    height: 100%;
-    width: 150px;
-    background-image: linear-gradient(-90deg, white, transparent);
+#contact-info {
+  width: 40%;
+  text-align: left;
+  padding: 20px;
+}
+
+#contact form {
+  display: inline-block;
+  width: 48%;
+  margin: 0 1% 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+form {
+  display: inline-block;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  width: 60%;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  width: 150px;
+  padding: 10px 20px;
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 20px auto;
+}
+
+#subscribe form {
+  width: 80%;
+  padding-inline-start: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#subscribe .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#subscribe .btn-primary {
+  width: 45%;
+}
+
+#subscribe p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  font-size: 14px;
+  text-align: center;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+label {
+  font-size: 16px;
 }
