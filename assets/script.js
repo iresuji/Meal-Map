@@ -3,6 +3,8 @@ console.log("test");
 
 
 
+//Restaurant recommendations by city
+
 $("#searchBtn").on("click", function (event) {
     event.preventDefault();
     console.log("Hello");
@@ -62,7 +64,42 @@ $("#searchBtn").on("click", function (event) {
 
         });
     });
-})
+});
+
+//Events recommendations by city
+
+$("#searchBtn").on("click", function (event) {
+    event.preventDefault();
+    console.log("Hello");
+
+    let city = $('#citySearch').val()
+
+    console.log(city);
+
+    //First query to search for e
+    const settings4 = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://eventfulvolodimir-kudriachenkov1.p.rapidapi.com/searchEvents" + city,
+        "method": "POST",
+        "headers": {
+            "content-type": "application/x-www-form-urlencoded",
+            "X-RapidAPI-Key": "68ca58338cmsh0e5547f05cd1b4bp1fa33djsn973d3db4137f",
+            "X-RapidAPI-Host": "Eventfulvolodimir-kudriachenkoV1.p.rapidapi.com"
+        },
+        "data": {
+            "consumerKey": "<REQUIRED>",
+            "consumerSecret": "<REQUIRED>",
+            "appKey": "<REQUIRED>"
+        }
+    };
+
+    $.ajax(settings4).done(function (response) {
+        console.log(response);
+    });
+
+
+});
 
 
 
