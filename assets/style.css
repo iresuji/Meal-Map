@@ -90,13 +90,13 @@ form {
   text-align: left;
 }
 
-label {
+>>>>>>>2ec87a45662d41b1da8a6a828ba6de1b586ad7b6 label {
   display: block;
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-*/ input,
+input,
 textarea {
   width: 100%;
   padding: 10px;
@@ -137,28 +137,57 @@ section {
   margin: 20px auto;
 }
 
-#subscribe form {
-  width: 80%;
-  padding-inline-start: 20px;
+#subscribe {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 30px;
+  margin: 50px 0;
 }
 
-#subscribe .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#subscribe .btn-primary {
-  width: 45%;
-}
-
-#subscribe p {
+#subscribe h2 {
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+#subscribe-section .form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#subscribe-section .form-container input[type="email"] {
+  width: 60%;
+  height: 40px;
+  margin-right: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+#subscribe-section .form-container input[type="submit"] {
+  width: 20%;
+  height: 40px;
+  font-size: 16px;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+#subscribe input[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+}
+
 
 h2 {
   text-align: center;
@@ -184,8 +213,5 @@ textarea {
 label {
   font-size: 16px;
 
-}
 
-.nav-link {
-  float: left;
 }
