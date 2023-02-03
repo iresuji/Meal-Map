@@ -42,46 +42,6 @@
     width: 100%;
     height: 100%;
 }
-#contact {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  margin: 50px 0;
-}
-
-#contact-info {
-  width: 40%;
-  text-align: left;
-  padding: 20px;
-}
-
-#contact form {
-  display: inline-block;
-    width: 48%;
-    margin: 0 1% 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
-}
-
-form {
-  display: inline-block;
-  margin-bottom: 50px;
-  margin-left: 20px;
-  width: 60%;
-}
-
-.form-group {
-  margin-bottom: 25px;
-  text-align: left;
-}
 
 label {
   display: block;
@@ -129,28 +89,57 @@ section {
   margin: 20px auto;
 }
 
-#subscribe form {
-  width: 80%;
-  padding-inline-start: 20px;
+#subscribe {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  padding: 30px;
+  margin: 50px 0;
 }
 
-#subscribe .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#subscribe .btn-primary {
-  width: 45%;
-}
-
-#subscribe p {
+#subscribe h2 {
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
+#subscribe-section .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#subscribe-section .form-container input[type="email"] {
+    width: 60%;
+    height: 40px;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}
+
+#subscribe-section .form-container input[type="submit"] {
+    width: 20%;
+    height: 40px;
+    font-size: 16px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#subscribe input[type="submit"]:hover {
+  background-color: #fff;
+  color: #333;
+}
+
 
 h2 {
   text-align: center;
@@ -175,6 +164,189 @@ textarea {
 
 label {
   font-size: 16px;
+}
+
+#about-us-container {
+  text-align: center;
+  padding: 50px;
+}
+
+#about-us-box {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#about-us-box p {
+  text-align: left;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+#about-us p {
+  font-size: 20px;
+  text-align: center;
+}
+
+#about-us h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  margin: 40px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+#testimonials {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.testimonial-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonial-header h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.testimonial-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.testimonial-box {
+  width: 30%;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.testimonial-author {
+  font-style: italic;
+}
+
+#newsletter {
+  background-color: #f2f2f2;
+  padding: 40px;
+  text-align: center;
+}
+
+#newsletter h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#newsletter p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #666;
+}
+
+#newsletter form {
+  display: inline-block;
+}
+
+#newsletter input[type="email"] {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"], 
+input[type="button"], 
+input[type="reset"], 
+button,
+input[type="submit"].newsletter-submit {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+#newsletter button[type="submit"]:hover {
+  background-color: white;
+  text-decoration-color: #333;
 }
 
   
