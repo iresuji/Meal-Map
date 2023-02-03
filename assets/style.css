@@ -94,14 +94,10 @@ label {
   display: block;
   font-size: 18px;
   margin-bottom: 10px;
-} */
+} 
 
-<<<<<<< HEAD
- /* input, textarea {
-=======
 input,
 textarea {
->>>>>>> d004d58424ad7a4c22079d532a41583fa06336c3
   width: 100%;
   padding: 10px;
   font-size: 18px;
@@ -187,10 +183,4 @@ textarea {
 
 label {
   font-size: 16px;
-<<<<<<< HEAD
 }
-
-   */
-=======
-}
->>>>>>> d004d58424ad7a4c22079d532a41583fa06336c3
