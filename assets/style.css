@@ -27,12 +27,25 @@
   background-image: url(./img/hero.png);
   color: white;
   height: 1000px;
+  background-position: center top;
   background-size: cover;
   margin-top: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(120vh - 150px);
 
+}
+
+.jumbotron .container form {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 70%;
 }
 
 .child {
@@ -444,15 +457,6 @@ input[type="submit"].newsletter-submit {
   text-align: center;
 }
 
-.jumbotron .container form {
-  display: flex;
-  justify-content: center;
-  width: 70%;
-  margin: 0 auto;
-}
 
-.form-control {
-  width: 70%;
-}
 
   
