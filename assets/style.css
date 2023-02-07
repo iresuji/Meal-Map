@@ -27,7 +27,12 @@
   background-image: url(./img/hero.png);
   color: white;
   height: 1000px;
-  background-size: cover
+  background-size: cover;
+  margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .child {
@@ -433,10 +438,21 @@ input[type="submit"].newsletter-submit {
   margin-top: 10px;
 }
 
-/* .navbar {
-  background-color: transparent !important;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-} */
+#search-bar {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jumbotron .container form {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-control {
+  width: 70%;
+}
+
   
