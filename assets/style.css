@@ -32,7 +32,6 @@
 
 .child {
   min-width: 600px;
-  height: 400px;
   margin: 1px 10px;
   cursor: pointer;
   border: 1px solid white;
