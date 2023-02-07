@@ -15,43 +15,38 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#"><img src="./assets/img/Mealmap.png" alt="Meal map Logo" class="logo"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="#testimonial">Testimonial</a>
         </li>
-        <li>
-          <div id="google_translate_element"></div>
-          <script type="text/javascript">
-            function googleTranslateElementInit() {
-              new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-            }
-          </script>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
-
       </ul>
+      <div class="ml-auto">
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+          function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+          }
+        </script>
+      </div>
     </div>
   </nav>
+  
     <!-- ISJ Jumbotron with search bar -->
     <div class="jumbotron jumbotron-fluid jumbotron-bg">
       <div class="container">
@@ -79,7 +74,7 @@
   </div>
 
   <div id="about-us-container">
-    <h2 id="about-us">About Us</h2>
+    <h2 id="about">About Us</h2>
     <div id="about-us-box">
       <p>
         Welcome to our restaurant locator website, your ultimate solution for
@@ -116,7 +111,7 @@
   </div>
 
   <div class="testimonial-header">
-    <h2>What our customers say</h2>
+    <h2 id="testimonial">What Our Customers Say</h2>
   </div>
 
   <div class="testimonial-container">
@@ -146,7 +141,7 @@
   <!-- EN contact us -->
 
   <div class="container">
-    <h2 class="section-title">Contact Us</h2>
+    <h2 class="section-title" id="contact">Contact Us</h2>
     <form action="#" class="contact-form">
       <div class="form-group">
         <label for="name">Name:</label>
