@@ -1,14 +1,12 @@
 console.log("test");
 
-$("#searchBtn").on("click", function (event) {
-  event.preventDefault();
-  console.log("Hello");
+var initialSearch = localStorage.getItem("city")
+if (initialSearch && initialSearch !== "") {
+  $("#citySearch").val(initialSearch);
+  search(initialSearch)
+}
 
-  let city = $("#citySearch").val();
-
-  console.log(city);
-
-  // First query to get locationID
+function search(city) {
   const settings = {
     async: true,
     crossDomain: true,
@@ -65,6 +63,22 @@ $("#searchBtn").on("click", function (event) {
       }
     });
   });
+}
+
+$("#searchBtn").on("click", function (event) {
+  event.preventDefault();
+  console.log("Hello");
+
+  let city = $("#citySearch").val();
+
+  localStorage.setItem("city", city);
+
+  search(city);
+
+  console.log(city);
+
+  // First query to get locationID
+
 });
 
 function discover(element) {
