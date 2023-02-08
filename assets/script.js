@@ -15,7 +15,7 @@ function search(city) {
       city,
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "60cf695559msh3d7df9863cf7bb1p1b0f39jsnfd5b1c8804fe",
+      "X-RapidAPI-Key": "75980977d5msh3aa264572f31770p12b67cjsn503a854eac7f",
       "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
     },
   };
@@ -34,7 +34,7 @@ function search(city) {
         searchId,
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "60cf695559msh3d7df9863cf7bb1p1b0f39jsnfd5b1c8804fe",
+        "X-RapidAPI-Key": "75980977d5msh3aa264572f31770p12b67cjsn503a854eac7f",
         "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
       },
     };
@@ -53,7 +53,7 @@ function search(city) {
         $(".scroll-images").append(
           `<div class="child">
     <img class="child-img" src="${imageRest}" alt="image" />
-    <p clss='nameRest'>${nameRest}</p>
+    <p class='nameRest'>${nameRest}</p>
     <p class='city'>${cityRest}</p>
     <p class='typeFood'>${typeFood}</p>
     <p class='rate'>${rateRest}</p>
@@ -103,6 +103,34 @@ function discover(element) {
 
   $.ajax(settings).done(function (response) {
     console.log(response);
+
+    var statusRest = response.data[0].business_status;
+    var aboutRest = response.data[0].about;
+    var verifiedRest = response.data[0].verified;
+    var fullNameRest = response.data[0].name;
+    var addressRest = response.data[0].address;
+    var phoneRest = response.data[0].phone_number;
+    var websiteRest = response.data[0].website;
+
+
+
+
+    $(".restDetails").append(
+        `<div class="child">
+
+        <p class='typeFood'>${verifiedRest}</p>
+        <p class='nameRest'>${statusRest}</p>
+        <p class='city'>${aboutRest}</p>
+        <p class='rate'>${fullNameRest}</p>
+        <p class='rate'>${addressRest}</p>
+        <p class='rate'>${phoneRest}</p>
+        <p class='rate'>${websiteRest}</p>
+        <button class='bookRest'" >"Book Restaurant"</button>
+        </div>`
+    )
+
+
+
     //   restaurant photos  business_id  to get photos
     var businessId = response.data[0].business_id;
     const settings2 = {
@@ -116,20 +144,22 @@ function discover(element) {
       headers: {
         "X-RapidAPI-Key": "68792a8c29msh7c9d9f267e046f3p104235jsne344dbf0c883",
         "X-RapidAPI-Host": "local-business-data.p.rapidapi.com",
+       
+     
+
       },
     };
 
     $.ajax(settings2).done(function (response) {
       console.log(response);
+      for (i = 0; response.data.length > i; i++) {
+        var pictureUrlRest = response.data[i].photo_url;
+
+        // adds Restaurant Images to the selected Restaurant 
+        $(".restImages").append(
+          `<div class="child">
+    <img class="child-img" src="${pictureUrlRest}" alt="image" />`)};
+
     });
   });
 }
-
-
-//Show modal on opening the page
-
-setTimeout(function () {
-  $('#newsletter').modal('show');
-}, 2000);
-
-
