@@ -116,7 +116,7 @@ function discover(element) {
 
 
     $(".restDetails").append(
-        `<div class="child">
+      `<div class="child">
 
         <p class='typeFood'>${verifiedRest}</p>
         <p class='nameRest'>${statusRest}</p>
@@ -144,8 +144,8 @@ function discover(element) {
       headers: {
         "X-RapidAPI-Key": "68792a8c29msh7c9d9f267e046f3p104235jsne344dbf0c883",
         "X-RapidAPI-Host": "local-business-data.p.rapidapi.com",
-       
-     
+
+
 
       },
     };
@@ -158,8 +158,15 @@ function discover(element) {
         // adds Restaurant Images to the selected Restaurant 
         $(".restImages").append(
           `<div class="child">
-    <img class="child-img" src="${pictureUrlRest}" alt="image" />`)};
+    <img class="child-img" src="${pictureUrlRest}" alt="image" />`)
+      };
 
     });
   });
 }
+
+//Show modal on opening the page
+
+setTimeout(function () {
+  $('#newsletter').modal('show');
+}, 2000);
