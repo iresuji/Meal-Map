@@ -1,182 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <title>Meal Map!</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./assets/style.css" />
-  <title>Find your Jum!</title>
-</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"
+        ><img src="./assets/img/Mealmap.png" alt="Meal map Logo" class="logo"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="./assets/img/Mealmap.png" alt="Meal map Logo" class="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#testimonial">Testimonial</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-      <div class="ml-auto">
-        <div id="google_translate_element"></div>
-        <script type="text/javascript">
-          function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-          }
-        </script>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonial">Testimonial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="ml-auto">
+          <div id="google_translate_element"></div>
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement(
+                { pageLanguage: "en" },
+                "google_translate_element"
+              );
+            }
+          </script>
+        </div>
       </div>
-    </div>
-  </nav>
-  
+    </nav>
+
     <!-- ISJ Jumbotron with search bar -->
     <div class="jumbotron jumbotron-fluid jumbotron-bg">
       <div class="container">
-        <h1 class="display-4">Find your jum!</h1>
+        <h1 class="display-4">Meal Map!</h1>
         <p class="lead">
-          This is a modified jumbotron that occupies the entire horizontal space
-          of its parent.
+          Welcome to our restaurant locator website, your ultimate solution for
+          finding the best dining experiences in town. Our platform makes it
+          easy for you to search for restaurant locations based on your
+          preferences.
         </p>
-        <form class="form-inline my-2 my-lg-0">
-          <input id='citySearch' class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button id='searchBtn' class="btn btn-outline-success my-2 my-sm-0 " type="submit">Search</button>
+        <form
+          class="form-inline my-2 my-lg-0"
+          style="
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            margin: 0 auto;
+          "
+        >
+          <input
+            id="citySearch"
+            class="form-control mr-sm-2"
+            style="width: 70%"
+            type="search"
+            placeholder="Find your jum!"
+            aria-label="Search"
+          />
+          <button
+            id="searchBtn"
+            class="btn btn-outline-success my-2 my-sm-0"
+            type="submit"
+          >
+            Search
+          </button>
         </form>
       </div>
     </div>
 
-  <!-- EU Horizontal scroll section for options -->
-  <div class="main-scroll">
-    <div></div>
-    <div class="cover">
-      <div class="scroll-images">
-        <!-- Restaurant options added by API query-->
+    <!-- EU Horizontal scroll section for options -->
+    <div class="main-scroll">
+      <div></div>
+      <div class="cover">
+        <div class="scroll-images">
+          <!-- Restaurant options added by API query-->
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <!--Find out more section to return more details when selecting restaurant option-->
+
+    <div class="restaurantCard">
+      <div></div>
+      <div class="cover">
+        <div class="restImages"></div>
+        <div class="restDetails"></div>
+      </div>
+      <div></div>
+    </div>
+
+    <!-- About Us -->
+    <div class="container about-container">
+      <h2
+        class="section-title"
+        id="about"
+        style="
+          font-size: 36px;
+          font-weight: bold;
+          color: #333;
+          text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+          margin-bottom: 2rem;
+        "
+      >
+        About Us
+      </h2>
+      <div id="about-us-box">
+        <p>
+          Welcome to our restaurant locator website, your ultimate solution for
+          finding the best dining experiences in town. Our platform makes it
+          easy for you to search for restaurant locations based on your
+          preferences. Whether you're looking for a quick bite or a romantic
+          dinner, we've got you covered.
+        </p>
+
+        <p>
+          Our platform allows you to search for restaurants by name, cuisine, or
+          location, and we'll provide you with a map showing the restaurant's
+          location, along with other important information such as hours of
+          operation and contact details.
+        </p>
+
+        <p>
+          We believe that the best way to find a great restaurant is through the
+          experiences of others. That's why we display reviews and ratings for
+          each restaurant, so you can get a sense of what to expect before you
+          even step foot through the door. Our platform is user-friendly, making
+          it easy for you to quickly find the information you need, and to read
+          about others' experiences.
+        </p>
+
+        <p>
+          Our goal is to make sure you have a fantastic dining experience every
+          time. That's why we work hard to keep our information up-to-date, and
+          we welcome feedback from our users. If you have a suggestion for a
+          restaurant that you think we should add, or if you'd like to share
+          your own dining experience, please let us know.
+        </p>
       </div>
     </div>
-    <div></div>
-  </div>
+    <!-- Testimonials -->
+    <div class="testimonial-header">
+      <h2 id="testimonial">What Our Customers Say</h2>
+    </div>
 
-  <!--Find out more section to return more details when selecting restaurant option-->
-
-  <div class="restaurantCard">
-    <div></div>
-    <div class="cover">
-      <div class="restImages">
+    <div class="testimonial-container">
+      <div class="testimonial-box">
+        <p class="testimonial-text">
+          "This restaurant locator platform has been a game-changer for me. I
+          can easily find new restaurants to try and never have to worry about
+          choosing a bad meal again."
+        </p>
+        <p class="testimonial-author">- John Doe</p>
       </div>
-      <div class="restDetails">
+      <div class="testimonial-box">
+        <p class="testimonial-text">
+          "I never have to stress about finding a good restaurant again. This
+          platform has made my dining experiences so much better and more
+          enjoyable."
+        </p>
+        <p class="testimonial-author">- Jane Doe</p>
+      </div>
+      <div class="testimonial-box">
+        <p class="testimonial-text">
+          "I love the convenience of this platform. I can easily find new
+          restaurants to try and always have a great dining experience."
+        </p>
+        <p class="testimonial-author">- Bob Smith</p>
       </div>
     </div>
-    <div></div>
-  </div>
 
-  <div id="about-us-container">
-    <h2 id="about">About Us</h2>
-    <div id="about-us-box">
-      <p>
-        Welcome to our restaurant locator website, your ultimate solution for
-        finding the best dining experiences in town. Our platform makes it
-        easy for you to search for restaurant locations based on your
-        preferences. Whether you're looking for a quick bite or a romantic
-        dinner, we've got you covered.
-      </p>
+    <!-- EN contact us -->
 
-      <p>
-        Our platform allows you to search for restaurants by name, cuisine, or
-        location, and we'll provide you with a map showing the restaurant's
-        location, along with other important information such as hours of
-        operation and contact details.
-      </p>
-
-      <p>
-        We believe that the best way to find a great restaurant is through the
-        experiences of others. That's why we display reviews and ratings for
-        each restaurant, so you can get a sense of what to expect before you
-        even step foot through the door. Our platform is user-friendly, making
-        it easy for you to quickly find the information you need, and to read
-        about others' experiences.
-      </p>
-
-      <p>
-        Our goal is to make sure you have a fantastic dining experience every
-        time. That's why we work hard to keep our information up-to-date, and
-        we welcome feedback from our users. If you have a suggestion for a
-        restaurant that you think we should add, or if you'd like to share
-        your own dining experience, please let us know.
-      </p>
+    <div class="container contact-container">
+      <h2
+        class="section-title"
+        id="contact"
+        style="text-align: center; margin: auto"
+      >
+        Contact Us
+      </h2>
+      <form action="#" class="contact-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" class="form-control" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            class="form-control"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
-  </div>
 
-  <div class="testimonial-header">
-    <h2 id="testimonial">What Our Customers Say</h2>
-  </div>
+    <!-- Subscribe to our newsletter -->
 
-  <div class="testimonial-container">
-    <div class="testimonial-box">
-      <p class="testimonial-text">
-        "I had a fantastic experience at the restaurant. The food was amazing
-        and the service was top notch. Highly recommend!"
-      </p>
-      <p class="testimonial-author">- John Doe</p>
-    </div>
-    <div class="testimonial-box">
-      <p class="testimonial-text">
-        "The restaurant has the best ambiance I've ever seen. I will
-        definitely be back for more!"
-      </p>
-      <p class="testimonial-author">- Jane Doe</p>
-    </div>
-    <div class="testimonial-box">
-      <p class="testimonial-text">
-        "I had a wonderful time at the restaurant. The food was delicious and
-        the staff was very friendly."
-      </p>
-      <p class="testimonial-author">- Bob Smith</p>
-    </div>
-  </div>
-
-  <!-- EN contact us -->
-
-  <div class="container">
-    <h2 class="section-title" id="contact">Contact Us</h2>
-    <form action="#" class="contact-form">
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" class="form-control" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" class="form-control" required />
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" class="form-control" required />
-      </div>
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" class="form-control" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
-
-  <div id="newsletter">
+    <!-- <div>
     <h2>Subscribe to Our Newsletter</h2>
     <p>
       Stay up to date with the latest news and special offers from our
@@ -185,21 +261,122 @@
     <form>
       <input type="email" placeholder="Enter your email address" />
       <button type="submit">Subscribe</button>
-    </form>
+    </form> -->
 
+    <div id="newsletter" class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Subscribe to Our Newsletter</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Stay up to date with the latest news and special offers from our
+              restaurant locator website
+            </p>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="name@example.com"
+              />
+            </div>
+          </form>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  
-  
+    <!-- Footer -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5 style="color: white">About Us</h5>
+            <p style="color: white">
+              Welcome to our restaurant locator website, your ultimate solution
+              for finding the best dining experiences in town. Our platform
+              makes it easy for you to search for restaurant locations based on
+              your preferences.
+            </p>
+          </div>
+          <div class="col-sm-3">
+            <h5>Links</h5>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#testimonial">Testimonial</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fa fa-map-marker"></i> 123 Main Street, Anytown, USA
+              </li>
+              <li><i class="fa fa-phone"></i> +01 234 567 89</li>
+              <li><i class="fa fa-envelope"></i> info@mealmap.com</li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Follow Us</h5>
+            <ul class="list-inline">
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <p style="color: white">
+            Copyright &copy; 2023 Example. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
       integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
       integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
-      crossorigin="anonymous"></script>
-    <script type="text/javascript"
-      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
     <script src="./assets/script.js"></script>
-</body>
-
+  </body>
 </html>

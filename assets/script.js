@@ -17,7 +17,7 @@ $("#searchBtn").on("click", function (event) {
       city,
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "60cf695559msh3d7df9863cf7bb1p1b0f39jsnfd5b1c8804fe",
+      "X-RapidAPI-Key": "75980977d5msh3aa264572f31770p12b67cjsn503a854eac7f",
       "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
     },
   };
@@ -36,7 +36,7 @@ $("#searchBtn").on("click", function (event) {
         searchId,
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "60cf695559msh3d7df9863cf7bb1p1b0f39jsnfd5b1c8804fe",
+        "X-RapidAPI-Key": "75980977d5msh3aa264572f31770p12b67cjsn503a854eac7f",
         "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
       },
     };
@@ -99,7 +99,7 @@ function discover(element) {
     var websiteRest = response.data[0].website;
 
 
-//Displays details of the selected restaurant
+
 
     $(".restDetails").append(
         `<div class="child">
@@ -111,7 +111,7 @@ function discover(element) {
         <p class='rate'>${addressRest}</p>
         <p class='rate'>${phoneRest}</p>
         <p class='rate'>${websiteRest}</p>
-        <button class='bookRest'" >"Book Now"</button>
+        <button class='bookRest'" >"Book Restaurant"</button>
         </div>`
     )
 
