@@ -55,7 +55,7 @@ $("#searchBtn").on("click", function (event) {
         $(".scroll-images").append(
           `<div class="child">
     <img class="child-img" src="${imageRest}" alt="image" />
-    <p clss='nameRest'>${nameRest}</p>
+    <p class='nameRest'>${nameRest}</p>
     <p class='city'>${cityRest}</p>
     <p class='typeFood'>${typeFood}</p>
     <p class='rate'>${rateRest}</p>
@@ -89,6 +89,34 @@ function discover(element) {
 
   $.ajax(settings).done(function (response) {
     console.log(response);
+
+    var statusRest = response.data[0].business_status;
+    var aboutRest = response.data[0].about;
+    var verifiedRest = response.data[0].verified;
+    var fullNameRest = response.data[0].name;
+    var addressRest = response.data[0].address;
+    var phoneRest = response.data[0].phone_number;
+    var websiteRest = response.data[0].website;
+
+
+//Displays details of the selected restaurant
+
+    $(".restDetails").append(
+        `<div class="child">
+
+        <p class='typeFood'>${verifiedRest}</p>
+        <p class='nameRest'>${statusRest}</p>
+        <p class='city'>${aboutRest}</p>
+        <p class='rate'>${fullNameRest}</p>
+        <p class='rate'>${addressRest}</p>
+        <p class='rate'>${phoneRest}</p>
+        <p class='rate'>${websiteRest}</p>
+        <button class='bookRest'" >"Book Now"</button>
+        </div>`
+    )
+
+
+
     //   restaurant photos  business_id  to get photos
     var businessId = response.data[0].business_id;
     const settings2 = {
@@ -102,11 +130,22 @@ function discover(element) {
       headers: {
         "X-RapidAPI-Key": "68792a8c29msh7c9d9f267e046f3p104235jsne344dbf0c883",
         "X-RapidAPI-Host": "local-business-data.p.rapidapi.com",
+       
+     
+
       },
     };
 
     $.ajax(settings2).done(function (response) {
       console.log(response);
+      for (i = 0; response.data.length > i; i++) {
+        var pictureUrlRest = response.data[i].photo_url;
+
+        // adds Restaurant Images to the selected Restaurant 
+        $(".restImages").append(
+          `<div class="child">
+    <img class="child-img" src="${pictureUrlRest}" alt="image" />`)};
+
     });
   });
 }
