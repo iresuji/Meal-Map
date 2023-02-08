@@ -110,3 +110,12 @@ function discover(element) {
     });
   });
 }
+
+
+//Show modal on opening the page
+
+setTimeout(function () {
+  $('#newsletter').modal('show');
+}, 2000);
+
+

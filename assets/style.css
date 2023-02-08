@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  
+
 }
 
 body {
@@ -145,14 +145,14 @@ form {
 .form-inline button:hover {
   background-color: #066059;
   transform: translateY(-3px);
-  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
 label {
   display: block;
   font-size: 18px;
   margin-bottom: 10px;
-} 
+}
 
 input,
 textarea {
@@ -166,7 +166,6 @@ textarea {
 }
 
 button[type="submit"] {
-  width: 20%;
   padding: 1rem;
   background-color: #066059;
   color: #fff;
@@ -174,7 +173,7 @@ button[type="submit"] {
   border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -182,7 +181,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #D06518;
   transform: translateY(-3px);
-  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
 button[type="submit"]:active {
@@ -212,36 +211,36 @@ section {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   margin-bottom: 2rem;
 }
 
 #subscribe-section .form-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #subscribe-section .form-container input[type="email"] {
-    width: 60%;
-    height: 40px;
-    margin-right: 10px;
-    padding: 0 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid lightgray;
+  width: 60%;
+  height: 40px;
+  margin-right: 10px;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
 }
 
 #subscribe-section .form-container input[type="submit"] {
-    width: 20%;
-    height: 40px;
-    font-size: 16px;
-    background-color: #00bfff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  width: 20%;
+  height: 40px;
+  font-size: 16px;
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 
@@ -279,7 +278,7 @@ label {
 #about-us-container {
   text-align: center;
   padding: 50px;
-  
+
 }
 
 #about-us-box {
@@ -306,16 +305,16 @@ label {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   margin-bottom: 2rem;
-  
+
 }
 
 #about h2 {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   margin-bottom: 2rem;
 }
 
@@ -385,9 +384,9 @@ label {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   margin-bottom: 5rem;
-  
+
 }
 
 .form-group {
@@ -432,7 +431,7 @@ label {
 }
 
 #newsletter {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   padding: 40px;
   text-align: center;
 }
@@ -441,7 +440,7 @@ label {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   margin-bottom: 2rem;
 }
 
@@ -464,12 +463,11 @@ label {
   border-radius: 5px;
 }
 
-input[type="submit"], 
-input[type="button"], 
-input[type="reset"], 
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
 button,
 input[type="submit"].newsletter-submit {
-  width: 50%;
   padding: 1rem;
   background-color: #066059;
   color: #fff;
@@ -477,7 +475,7 @@ input[type="submit"].newsletter-submit {
   border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -485,7 +483,7 @@ input[type="submit"].newsletter-submit {
 #newsletter button[type="submit"]:hover {
   background-color: #D06518;
   transform: translateY(-3px);
-  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
 .logo {
@@ -544,7 +542,7 @@ input[type="submit"].newsletter-submit {
   background-color: #f2f2f2;
   padding: 3rem;
   border-radius: 1rem;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   text-align: center;
 }
 
@@ -555,7 +553,7 @@ input[type="submit"].newsletter-submit {
   margin-bottom: 1.5rem;
   border-radius: 0.5rem;
   border: none;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   font-size: 1.2rem;
   outline: none;
 }
@@ -577,7 +575,7 @@ input[type="submit"].newsletter-submit {
   border-radius: 0.5rem;
   font-size: 1.2rem;
   font-weight: bold;
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -585,16 +583,22 @@ input[type="submit"].newsletter-submit {
 .contact-form button[type="submit"]:hover {
   background-color: #D06518;
   transform: translateY(-3px);
-  box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
 }
 
 .contact-container h2.section-title {
   font-size: 36px;
   font-weight: bold;
   color: #333;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   margin-bottom: 2rem;
 }
+
+/* .modal {
+  background-image: url(./img/Mealmap.png);
+  background-size: cover;
+} */
+
 
 footer {
   display: flex;
@@ -606,7 +610,7 @@ footer {
   font-size: 1.2rem;
   text-align: center;
   margin-top: 1rem;
-  
+
 }
 
 footer a {
@@ -661,6 +665,13 @@ footer .social-icons a:hover {
   height: auto;
 }
 
+.btn-secondary {
+  background-color: #066059;
+  font: Helvetica, Arial, sans-serif;
+}
 
-
-
+.btn-secondary type button:hover {
+  background-color: #D06518;
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+}
