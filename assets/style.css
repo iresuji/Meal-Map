@@ -625,9 +625,14 @@ input[type="submit"].newsletter-submit {
   opacity: 0.2;
 }
 
-.modal-content {
+.modal-header,
+.modal-body,
+.modal-dialog form,
+.modal-footer {
+  z-index: 1;
   position: relative;
 }
+
 
 
 
