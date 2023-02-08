@@ -68,6 +68,8 @@ body {
 .jumbotron h1,
 .jumbotron p {
   color: whitesmoke;
+  display: flex;
+  justify-content: center;
 }
 
 .form-control {
