@@ -17,7 +17,7 @@ $("#searchBtn").on("click", function (event) {
       city,
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "75980977d5msh3aa264572f31770p12b67cjsn503a854eac7f",
+      "X-RapidAPI-Key": "cc8ec927b3mshd52fa524ced1981p1f583ajsnd52acca28ce6",
       "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
     },
   };
@@ -36,7 +36,7 @@ $("#searchBtn").on("click", function (event) {
         searchId,
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "75980977d5msh3aa264572f31770p12b67cjsn503a854eac7f",
+        "X-RapidAPI-Key": "cc8ec927b3mshd52fa524ced1981p1f583ajsnd52acca28ce6",
         "X-RapidAPI-Host": "tripadvisor16.p.rapidapi.com",
       },
     };
@@ -53,14 +53,14 @@ $("#searchBtn").on("click", function (event) {
 
         // adds Restaurant options on the HTML
         $(".scroll-images").append(
-          `<div class="child">
-    <img class="child-img" src="${imageRest}" alt="image" />
-    <p class='nameRest'>${nameRest}</p>
-    <p class='city'>${cityRest}</p>
-    <p class='typeFood'>${typeFood}</p>
-    <p class='rate'>${rateRest}</p>
-    <button class='findmore' onclick="discover(this)" data-restaurantName="${nameRest}" data-cityRest= "${cityRest}" >"Find out more"</button>
-    </div>`
+          `<div class="child cardOptions">
+          <div class="imageRestCard"><img class="child-img" src="${imageRest}" alt="image" /></div>
+          <p class='nameRest' style="color: whitesmoke; display: flex; justify-content: center;">${nameRest}</p>
+          <p class='city' style="color: whitesmoke; display: flex; justify-content: center;">${cityRest}</p>
+          <p class='typeFood' style="color: whitesmoke; display: flex; justify-content: center;">${typeFood}</p>
+          <p class='rate' style="color: whitesmoke; display: flex; justify-content: center;">${rateRest}</p>
+          <button class='findmore btn btn-outline-success my-2 my-sm-0' style="margin: 0 auto; display: flex; justify-content: center;" onclick="discover(this)" data-restaurantName="${nameRest}" data-cityRest= "${cityRest}" >"Find out more"</button>
+        </div>`
         );
       }
     });
@@ -91,31 +91,25 @@ function discover(element) {
     console.log(response);
 
     var statusRest = response.data[0].business_status;
-    var aboutRest = response.data[0].about;
+    var aboutRest = response.data[0].about.summary;
     var verifiedRest = response.data[0].verified;
     var fullNameRest = response.data[0].name;
     var addressRest = response.data[0].address;
     var phoneRest = response.data[0].phone_number;
     var websiteRest = response.data[0].website;
 
-
-
-
     $(".restDetails").append(
-        `<div class="child">
+      `<div class="child cardOptions">
 
-        <p class='typeFood'>${verifiedRest}</p>
-        <p class='nameRest'>${statusRest}</p>
-        <p class='city'>${aboutRest}</p>
-        <p class='rate'>${fullNameRest}</p>
-        <p class='rate'>${addressRest}</p>
-        <p class='rate'>${phoneRest}</p>
-        <p class='rate'>${websiteRest}</p>
-        <button class='bookRest'" >"Book Restaurant"</button>
-        </div>`
-    )
-
-
+      <h5 class="card-title typeFood  style="color: whitesmoke; display: flex; justify-content: center;">${verifiedRest}</h5>
+      <p class="card-text nameRest  style="color: whitesmoke; display: flex; justify-content: center;">${statusRest}</p>
+      <p class="card-text city  style="color: whitesmoke; display: flex; justify-content: center;">${aboutRest}</p>
+      <p class="card-text rate  style="color: whitesmoke; display: flex; justify-content: center;">${fullNameRest}</p>
+      <p class="card-text rate  style="color: whitesmoke; display: flex; justify-content: center;">${addressRest}</p>
+      <p class="card-text rate  style="color: whitesmoke; display: flex; justify-content: center;">${phoneRest}</p>
+      <p class="card-text rate  style="color: whitesmoke; display: flex; justify-content: center;">${websiteRest}</p>
+      <a href="${websiteRest}" class="btn btn-primary bookRest style="margin: 0 auto; display: flex; justify-content: center;">Book Now</a>`
+    );
 
     //   restaurant photos  business_id  to get photos
     var businessId = response.data[0].business_id;
@@ -130,9 +124,6 @@ function discover(element) {
       headers: {
         "X-RapidAPI-Key": "68792a8c29msh7c9d9f267e046f3p104235jsne344dbf0c883",
         "X-RapidAPI-Host": "local-business-data.p.rapidapi.com",
-       
-     
-
       },
     };
 
@@ -141,11 +132,12 @@ function discover(element) {
       for (i = 0; response.data.length > i; i++) {
         var pictureUrlRest = response.data[i].photo_url;
 
-        // adds Restaurant Images to the selected Restaurant 
+        // adds Restaurant Images to the selected Restaurant
         $(".restImages").append(
           `<div class="child">
-    <img class="child-img" src="${pictureUrlRest}" alt="image" />`)};
-
+    <img class="child-img" src="${pictureUrlRest}" alt="image" />`
+        );
+      }
     });
   });
 }
