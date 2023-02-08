@@ -277,6 +277,7 @@ label {
 #about-us-container {
   text-align: center;
   padding: 50px;
+  
 }
 
 #about-us-box {
@@ -305,8 +306,8 @@ label {
   color: #333;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
   margin-bottom: 2rem;
+  
 }
-
 
 #about h2 {
   font-size: 36px;
@@ -316,10 +317,11 @@ label {
   margin-bottom: 2rem;
 }
 
-.container {
+.about-container {
   width: 80%;
   margin: 0 auto;
   text-align: center;
+  height: 80vh;
 }
 
 .section-title {
@@ -372,11 +374,6 @@ label {
   padding: 40px 0;
 }
 
-/* #testimonials h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-} */
-
 .testimonial-header {
   text-align: center;
   margin-bottom: 20px;
@@ -387,7 +384,13 @@ label {
   font-weight: bold;
   color: #333;
   text-shadow: 2px 2px 5px rgba(0,0,0,0.75);
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
+  
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
 }
 
 .testimonial-container {
@@ -399,6 +402,12 @@ label {
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.testimonial-header {
+  height: 10vh;
+  margin-bottom: auto;
+  margin-top: auto;
 }
 
 
@@ -497,7 +506,7 @@ input[type="submit"].newsletter-submit {
 }
 
 .nav-item a {
-  color: #333;
+  color: #066059;
   font-weight: bold;
   text-decoration: none;
 }
@@ -524,7 +533,7 @@ input[type="submit"].newsletter-submit {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   flex-direction: column;
 }
 
@@ -595,6 +604,7 @@ footer {
   font-size: 1.2rem;
   text-align: center;
   margin-top: 1rem;
+  
 }
 
 footer a {
@@ -604,7 +614,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #066059;
+  color: #D06518;
 }
 
 footer p {
@@ -643,6 +653,10 @@ footer .social-icons a:hover {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   color: white;
+}
+
+.footer-container {
+  height: auto;
 }
 
 
