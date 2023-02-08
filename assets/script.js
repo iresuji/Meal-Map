@@ -1,14 +1,12 @@
 console.log("test");
 
-$("#searchBtn").on("click", function (event) {
-  event.preventDefault();
-  console.log("Hello");
+var initialSearch = localStorage.getItem("city")
+if (initialSearch && initialSearch !== "") {
+  $("#citySearch").val(initialSearch);
+  search(initialSearch)
+}
 
-  let city = $("#citySearch").val();
-
-  console.log(city);
-
-  // First query to get locationID
+function search(city) {
   const settings = {
     async: true,
     crossDomain: true,
@@ -65,6 +63,22 @@ $("#searchBtn").on("click", function (event) {
       }
     });
   });
+}
+
+$("#searchBtn").on("click", function (event) {
+  event.preventDefault();
+  console.log("Hello");
+
+  let city = $("#citySearch").val();
+
+  localStorage.setItem("city", city);
+
+  search(city);
+
+  console.log(city);
+
+  // First query to get locationID
+
 });
 
 function discover(element) {
@@ -99,7 +113,23 @@ function discover(element) {
     var websiteRest = response.data[0].website;
 
     $(".restDetails").append(
+<<<<<<< HEAD
       `<div class="child cardOptions">
+=======
+      `<div class="child">
+
+        <p class='typeFood'>${verifiedRest}</p>
+        <p class='nameRest'>${statusRest}</p>
+        <p class='city'>${aboutRest}</p>
+        <p class='rate'>${fullNameRest}</p>
+        <p class='rate'>${addressRest}</p>
+        <p class='rate'>${phoneRest}</p>
+        <p class='rate'>${websiteRest}</p>
+        <button class='bookRest'" >"Book Restaurant"</button>
+        </div>`
+    )
+
+>>>>>>> 591ac8212e0491e09144fb6765d6462dcd2627a7
 
       <h5 class="card-title typeFood  style="color: whitesmoke; display: flex; justify-content: center;">${verifiedRest}</h5>
       <p class="card-text nameRest  style="color: whitesmoke; display: flex; justify-content: center;">${statusRest}</p>
@@ -124,6 +154,12 @@ function discover(element) {
       headers: {
         "X-RapidAPI-Key": "68792a8c29msh7c9d9f267e046f3p104235jsne344dbf0c883",
         "X-RapidAPI-Host": "local-business-data.p.rapidapi.com",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 591ac8212e0491e09144fb6765d6462dcd2627a7
       },
     };
 
@@ -135,9 +171,21 @@ function discover(element) {
         // adds Restaurant Images to the selected Restaurant
         $(".restImages").append(
           `<div class="child">
+<<<<<<< HEAD
     <img class="child-img" src="${pictureUrlRest}" alt="image" />`
         );
       }
+=======
+    <img class="child-img" src="${pictureUrlRest}" alt="image" />`)
+      };
+
+>>>>>>> 591ac8212e0491e09144fb6765d6462dcd2627a7
     });
   });
 }
+
+//Show modal on opening the page
+
+setTimeout(function () {
+  $('#newsletter').modal('show');
+}, 2000);

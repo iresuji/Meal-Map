@@ -603,10 +603,38 @@ input[type="submit"].newsletter-submit {
   margin-bottom: 2rem;
 }
 
-/* .modal {
+/* 
+.modal-content {
   background-image: url(./img/Mealmap.png);
   background-size: cover;
 } */
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  /* Specify the background image to be used */
+  background-image: url(./img/Mealmap.png);
+  background-size: cover;
+
+  /* Specify the background image */
+  opacity: 0.2;
+}
+
+.modal-header,
+.modal-body,
+.modal-dialog form,
+.modal-footer {
+  z-index: 1;
+  position: relative;
+}
+
+
+
 
 
 footer {
@@ -683,6 +711,7 @@ footer .social-icons a:hover {
   background-color: #D06518;
   transform: translateY(-3px);
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.75);
+<<<<<<< HEAD
 }
 
 .cardOptions{
@@ -693,4 +722,6 @@ footer .social-icons a:hover {
   width: 600px;
   height: 400px;
   overflow: hidden;
+=======
+>>>>>>> 591ac8212e0491e09144fb6765d6462dcd2627a7
 }
