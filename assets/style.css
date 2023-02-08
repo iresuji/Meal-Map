@@ -603,10 +603,33 @@ input[type="submit"].newsletter-submit {
   margin-bottom: 2rem;
 }
 
-/* .modal {
+/* 
+.modal-content {
   background-image: url(./img/Mealmap.png);
   background-size: cover;
 } */
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+
+  /* Specify the background image to be used */
+  background-image: url(./img/Mealmap.png);
+  background-size: cover;
+
+  /* Specify the background image */
+  opacity: 0.2;
+}
+
+.modal-content {
+  position: relative;
+}
+
+
 
 
 footer {
